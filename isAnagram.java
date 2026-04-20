@@ -2,7 +2,7 @@ import java.util.*;
 import java.util.HashMap;
 public class Maps{
       public boolean isAnagram(String s, String t) {
-        if (s.length() != t.length()) {
+        if (s.length() != t.length()) { 
             return false;
         }
         HashMap<Character,Integer> map=new HashMap<>(); 
