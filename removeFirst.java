@@ -1,0 +1,34 @@
+import java.util.*;
+public class LinkedList{
+    public static class Node{
+        int data;
+        Node next;
+        public Node(int data){
+            this.data=data;
+            this.next=null;
+        }
+    }
+    public static Node head;
+    public static Node tail;
+     public static int size;
+public int removeFirst(){
+        if(size==0){
+            System.out.println("linked list is empty");
+            return Integer.MIN_VALUE;
+        }else if(size==1){
+            int val=head.data;
+            head=tail=null;
+            size=0;
+            return val;
+        }
+        int value=head.data;
+        head=head.next;
+        size--;
+        return value;
+    } 
+public static void main(String args[]){
+        LinkedList ll=new LinkedList();
+                System.out.println(ll.size);
+        System.out.println( ll.removeFirst());
+}
+}
